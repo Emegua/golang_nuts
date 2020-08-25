@@ -1,0 +1,12 @@
+#0  swapcontext () at ../sysdeps/unix/sysv/linux/x86_64/swapcontext.S:39
+#1  0x000056105e264980 in pth_yield (to=0x0) at /home/yonatan/blockchain-sim/shadow/src/external/rpth/pth_lib.c:665
+#2  0x000056105e266cd2 in pth_wait (ev_ring=0x7f2934003a90) at /home/yonatan/blockchain-sim/shadow/src/external/rpth/pth_event.c:497
+#3  0x000056105e268c97 in pth_cond_await (cond=0x7f2934028380, mutex=0x7f29340038c0, ev_extra=0x0) at /home/yonatan/blockchain-sim/shadow/src/external/rpth/pth_sync.c:285
+#4  0x000056105e2468af in process_emu_pthread_cond_wait (proc=0x56105f6da6e0, cond=0x7f2903fd1ae0 <runtime_init_cond>, mutex=0x7f2903fd1aa0 <runtime_init_mu>) at /home/yonatan/blockchain-sim/shadow/src/main/host/shd-process.c:7688
+#5  0x00007f2940632bee in pthread_cond_wait (a=0x7f2903fd1ae0 <runtime_init_cond>, b=0x7f2903fd1aa0 <runtime_init_mu>) at /home/yonatan/blockchain-sim/shadow/src/preload/shd-preload-defs.h:374
+#6  0x00007f29030a131f in _cgo_wait_runtime_init_done () at ../../../src/libgo/runtime/go-cgo.c:33
+#7  0x00007f2940418660 in mainGo () at cgo-gccgo-export-file-prolog:31
+#8  0x000056105e233411 in _process_executeMain (proc=0x56105f6da6e0) at /home/yonatan/blockchain-sim/shadow/src/main/host/shd-process.c:1006
+#9  0x000056105e2639b4 in pth_spawn_trampoline () at /home/yonatan/blockchain-sim/shadow/src/external/rpth/pth_lib.c:357
+#10 0x00007f294611b740 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#11 0x0000000000000000 in ?? ()
