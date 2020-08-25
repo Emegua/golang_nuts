@@ -1,0 +1,11 @@
+#0  runtime.gogo (newg=newg@entry=0xc420000a80) at ../../../src/libgo/runtime/proc.c:283
+#1  0x00007fb7e2cbb89d in runtime.execute (gp=gp@entry=0xc420000a80, inheritTime=inheritTime@entry=true) at ../../../src/libgo/go/runtime/proc.go:2120
+#2  0x00007fb7e2cc3c48 in runtime.schedule () at ../../../src/libgo/go/runtime/proc.go:2495
+#3  0x00007fb7e2ccb991 in runtime.mstart1 (dummy=dummy@entry=0) at ../../../src/libgo/go/runtime/proc.go:1198
+#4  0x00007fb7e28a2086 in runtime_mstart (arg=<optimized out>) at ../../../src/libgo/runtime/proc.c:545
+#5  0x00007fb8183fdb9a in gostart () from /home/yonatan/blockchain-sim/tests/regtest/shadow-golang/build/libgotest.so
+#6  0x00007fb8183fdc49 in __morestack () from /home/yonatan/blockchain-sim/tests/regtest/shadow-golang/build/libgotest.so
+#7  0x000055bd55496b66 in _process_executeChild (data=0x7fb80c004060) at /home/yonatan/blockchain-sim/shadow/src/main/host/shd-process.c:844
+#8  0x000055bd554c79b4 in pth_spawn_trampoline () at /home/yonatan/blockchain-sim/shadow/src/external/rpth/pth_lib.c:357
+#9  0x00007fb820108740 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#10 0x0000000000000000 in ?? ()
