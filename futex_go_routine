@@ -1,0 +1,10 @@
+#0  runtime.futex (val3=0, addr2=0x0, ts=0x0, val=0, op=0, addr=0x7fb7e37ecbb8 <runtime.newmHandoff+24>) at ../../../src/libgo/go/runtime/os_linux.go:17
+#1  runtime.futexsleep (ns=-1, val=0, addr=0x7fb7e37ecbb8 <runtime.newmHandoff+24>) at ../../../src/libgo/go/runtime/os_linux.go:48
+#2  runtime.futexsleep (addr=addr@entry=0x7fb7e37ecbb8 <runtime.newmHandoff+24>, ns=ns@entry=-1, val=0) at ../../../src/libgo/go/runtime/os_linux.go:39
+#3  0x00007fb7e2cacbde in runtime.notesleep (n=n@entry=0x7fb7e37ecbb8 <runtime.newmHandoff+24>) at ../../../src/libgo/go/runtime/lock_futex.go:163
+#4  0x00007fb7e2cb99a5 in runtime.templateThread () at ../../../src/libgo/go/runtime/proc.go:1852
+#5  0x00007fb7e2ccb94c in runtime.mstart1 (dummy=dummy@entry=0) at ../../../src/libgo/go/runtime/proc.go:1188
+#6  0x00007fb7e28a2086 in runtime_mstart (arg=<optimized out>) at ../../../src/libgo/runtime/proc.c:545
+#7  0x000055bd55496b66 in _process_executeChild (data=0x7fb80c0391a0) at /home/yonatan/blockchain-sim/shadow/src/main/host/shd-process.c:844
+#8  0x000055bd554c79b4 in pth_spawn_trampoline () at /home/yonatan/blockchain-sim/shadow/src/external/rpth/pth_lib.c:357
+#9  0x00007fb820108740 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
