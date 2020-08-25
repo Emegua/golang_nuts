@@ -1,0 +1,13 @@
+(gdb) bt
+#0  __tls_get_addr (ti=0x7f7613dad780) at /home/yonatan/blockchain-sim/shadow/src/external/elf-loader/glibc.c:138
+#1  0x00007f76130a3af0 in runtime.getg () at ../../../src/libgo/runtime/proc.c:210
+#2  0x00007f76134d133c in runtime.gomcache () at ../../../src/libgo/go/runtime/runtime1.go:491
+#3  runtime.mallocgc (size=<optimized out>, typ=<optimized out>, needzero=needzero@entry=true) at ../../../src/libgo/go/runtime/malloc.go:661
+#4  0x00007f76134d308f in runtime.newobject (typ=typ@entry=0x7f7613d5b660 <runtime..runtime.g..d>) at ../../../src/libgo/go/runtime/malloc.go:873
+#5  0x00007f76134cefab in runtime.allocg () at ../../../src/libgo/go/runtime/stubs.go:362
+#6  0x00007f76130a42ec in runtime.malg (allocatestack=allocatestack@entry=true, signalstack=signalstack@entry=true, ret_stack=ret_stack@entry=0x7f7613fefdb0 <runtime.m0+1936>, ret_stacksize=ret_stacksize@entry=0x7f7613fefdb8 <runtime.m0+1944>) at ../../../src/libgo/runtime/proc.c:730
+#7  0x00007f76134ae14d in runtime.mpreinit (mp=0x7f7613fef620 <runtime.m0>) at ../../../src/libgo/go/runtime/os_gccgo.go:21
+#8  runtime.mcommoninit (mp=<optimized out>) at ../../../src/libgo/go/runtime/proc.go:563
+#9  0x00007f76134d4fbe in runtime.schedinit () at ../../../src/libgo/go/runtime/proc.go:489
+#10 0x00007f7618eebb7f in gostart () from /home/yonatan/blockchain-sim/tests/regtest/shadow-golang/build/libgotest.so
+#11 0x00007f7618eebc49 in __morestack () from /home/yonatan/blockchain-sim/tests/regtest/shadow-golang/build/libgotest.so
