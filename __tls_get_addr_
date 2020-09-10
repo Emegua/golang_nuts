@@ -1,0 +1,8 @@
+
+
+#0  __tls_get_addr (ti=0x7fc62796a780) 
+#1  0x00007fc626c60af0 in runtime.getg () at ../../../src/libgo/runtime/proc.c:210
+#2  0x00007fc62708e33c in runtime.gomcache () at ../../../src/libgo/go/runtime/runtime1.go:491
+#3  runtime.mallocgc (size=<optimized out>, typ=<optimized out>, needzero=<optimized out>) at ../../../src/libgo/go/runtime/malloc.go:661
+#4  0x00007fc62717d1a5 in __morestack () at ../../../src/libgcc/config/i386/morestack.S:546
+#5  0x00007fc62709008f in runtime.newobject (typ=typ@entry=0x7fc627919620 <runtime..runtime.p..d>) at ../../../src/libgo/go/runtime/malloc.go:873
